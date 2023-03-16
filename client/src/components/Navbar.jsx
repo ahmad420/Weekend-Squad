@@ -31,24 +31,21 @@ function NavComp() {
                   <Nav.Link href="list">List</Nav.Link>
 
                   <NavDropdown
-                    title="Dropdown"
+                    title="more things"
+                    className="mb-4"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="squad">squad </NavDropdown.Item>
+                    <NavDropdown.Item href="/"> home</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="/">contact us</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
                     type="search"
                     placeholder="Search"
-                    className="me-2"
+                    className="me-2 "
                     aria-label="Search"
                   />
                   <Button variant="outline-success">Search</Button>
