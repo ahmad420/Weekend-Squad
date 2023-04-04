@@ -1,4 +1,5 @@
-import firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 import "firebase/auth";
 
 const firebaseConfig = {
@@ -10,5 +11,7 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_PUBLIC_APP_ID,
   measurementId: process.env.REACT_APP_PUBLIC_MEASUREMENT_ID,
 };
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-firebase.initializeApp(firebaseConfig);
+export { app, db };

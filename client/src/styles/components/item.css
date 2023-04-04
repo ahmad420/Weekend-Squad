@@ -1,0 +1,29 @@
+.item {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .favorite {
+    color: gold;
+  }
+  
+  .edit-input {
+    width: 100%;
+    margin-right: 10px;
+  }
+  
+  .item-buttons {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .item-buttons button {
+    margin-right: 5px;
+  }
+  
