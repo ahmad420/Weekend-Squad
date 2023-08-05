@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import List from "./pages/List";
 import Squad from "./pages/squad";
+import Login from "./pages/Login";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/list" element={<List />} />
           <Route path="/squad" element={<Squad />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
       <Footer />

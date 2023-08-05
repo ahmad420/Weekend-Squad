@@ -20,7 +20,7 @@ const Home = () => {
             <Col md={6} className="text-center">
               <h1>Welcome to Weekend Squad</h1>
               <p>Explore amazing destinations and plan your next adventure.</p>
-              <Button onClick={handleButton} variant="info">
+              <Button onClick={handleButton} variant="outline-info">
                 Get Started
               </Button>
             </Col>
