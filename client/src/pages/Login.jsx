@@ -1,55 +1,55 @@
 import React, { useState } from "react";
-import { app } from "../config/firebaseConfig"; // Import your firebase configuration
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { app } from "../config/firebaseConfig"; // Import your firebase configuration
+// import { useAuthState } from "react-firebase-hooks/auth";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import "../styles/pages/Login.css"; // Import your custom styles
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  const auth = getAuth(app); // Initialize the auth object
+  // const auth = getAuth(app); // Initialize the auth object
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
+  // const [user, loading, error] = useAuthState(auth);
   const [emailError, setEmailError] = useState(null);
   const [passwordError, setPasswordError] = useState(null);
 
   const handleEmailLogin = async () => {
-    setEmailError(null);
-    setPasswordError(null);
+    alert("clicked");
+    // setEmailError(null);
+    // setPasswordError(null);
 
-    // Email validation
-    if (!email) {
-      setEmailError("Email is required");
-      return;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      setEmailError("Invalid email format");
-      return;
-    }
+    // // Email validation
+    // if (!email) {
+    //   setEmailError("Email is required");
+    //   return;
+    // } else if (!/\S+@\S+\.\S+/.test(email)) {
+    //   setEmailError("Invalid email format");
+    //   return;
+    // }
 
-    // Password validation
-    if (!password) {
-      setPasswordError("Password is required");
-      return;
-    } else if (password.length < 6) {
-      setPasswordError("Password must be at least 6 characters");
-      return;
-    }
+    // // Password validation
+    // if (!password) {
+    //   setPasswordError("Password is required");
+    //   return;
+    // } else if (password.length < 6) {
+    //   setPasswordError("Password must be at least 6 characters");
+    //   return;
+    // }
 
-    try {
-      await signInWithEmailAndPassword(auth, email, password); // Use the auth object
-    } catch (error) {
-      console.error("Error signing in with email and password:", error);
-      // Display error to the user (you can handle this better)
-    }
+    // try {
+    //   await signInWithEmailAndPassword(auth, email, password);
+    // } catch (error) {
+    //   console.error("Error signing in with email and password:", error);
+    // }
   };
 
   return (
     <Container className="login-container">
       <div className="login-form">
         <h2>Login</h2>
-        {error && (
-          <Alert variant="danger">Login failed. Please try again.</Alert>
-        )}
+        {/* {error && ( */}
+        <Alert variant="danger">Login failed. Please try again.</Alert>
+        {/* )} */}
         <Form>
           <Form.Group controlId="email">
             <Form.Label className="form-label">Email</Form.Label>
